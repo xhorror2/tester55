@@ -1,0 +1,27 @@
+version: '2'
+services:
+  bot:
+    build: .
+    container_name: 'zolobot'
+    environment:
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+      WOLFRAM_ALPHA_APP_ID: ${WOLFRAM_ALPHA_APP_ID}
+      HTB_CREDS_EMAIL: ${HTB_CREDS_EMAIL}
+      HTB_CREDS_PASS: ${HTB_CREDS_PASS}
+    restart: always
+    volumes:
+      - .:/ovisbot
+    working_dir: /ovisbot
+    command: bash -c "pip install . && ovisbot"
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    restart: always
+    volumes:
+      - db-data:/data/db
+volumes:
+  db-data:
+    driver: local
