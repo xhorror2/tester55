@@ -114,7 +114,7 @@ toml==0.10.0
 transaction==2.4.0
 typed-ast==1.4.1
 typing-extensions==3.7.2
-urllib3==1.25.3
+urllib3==1.26.5
 virtualenv==20.0.10
 websockets==6.0
 wemake-python-styleguide==0.13.4
