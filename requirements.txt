@@ -67,7 +67,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 multidict==4.5.2
 nodeenv==1.3.5
-numpy==1.16.4
+numpy==1.22.0
 -e git+https://github.com/apogiatzis/KyriosZolo@7b1afe3be52854773172784eacd4e206155e5ef1#egg=OvisBot
 packaging==20.3
 parse==1.15.0
